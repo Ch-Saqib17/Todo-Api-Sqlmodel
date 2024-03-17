@@ -10,7 +10,7 @@ interface IData {
 
 // const Baseurl = "http://127.0.0.1:8000";
 
-const Baseurl = "https://todo-api-sqlmodel.vercel.app/";
+const Baseurl = "*";
 
 const GetData = () => {
   const [data, setData] = useState<IData[]>([]);
