@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const Baseurl = "http://127.0.0.1:8000/";
+const Baseurl = "https://todo-api-sqlmodel.vercel.app/";
 
 const Adddata = () => {
   const [name, setName] = useState("");
