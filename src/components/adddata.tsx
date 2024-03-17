@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-const Baseurl = "*";
+const Baseurl = "http://127.0.0.1:8000/";
 
 const Adddata = () => {
   const [name, setName] = useState("");
@@ -33,7 +33,7 @@ const Adddata = () => {
           required
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="pl-4  py-2 mt-1 focus:ring-teal-500 focus:border-teal-500 block  w-[560px]  border-neutral-300 rounded-md bg-gray-100  text-neutral-900"
+          className="pl-4  py-2 mt-1 focus:ring-teal-500 focus:border-teal-500 block  w-[570px]  border-neutral-300 rounded-md bg-gray-100  text-neutral-900"
         />
         <input
           type="text"
@@ -43,13 +43,13 @@ const Adddata = () => {
           required
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="pl-4  py-2 mt-1 focus:ring-teal-500 focus:border-teal-500 block w-[560px] border-neutral-300 rounded-md bg-gray-100  text-neutral-900"
+          className="pl-4  py-2 mt-1 focus:ring-teal-500 focus:border-teal-500 block w-[570px] border-neutral-300 rounded-md bg-gray-100  text-neutral-900"
         />
       </div>
       <button
         onClick={handelsubmit}
         type="button"
-        className="flex items-center justify-center absolute right-2 mt-1 font-medium  bg-teal-500/30 text-neutral-900 -100 rounded-full w-7 h-7"
+        className="flex items-center justify-center absolute ml-4 right-0 mt-1 font-medium  bg-teal-500/30 text-neutral-900 -100 rounded-full w-7 h-7"
       >
         <svg
           viewBox="0 0 1024 1024"

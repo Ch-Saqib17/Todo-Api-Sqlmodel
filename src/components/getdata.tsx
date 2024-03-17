@@ -10,12 +10,11 @@ interface IData {
 
 // const Baseurl = "http://127.0.0.1:8000";
 
-const Baseurl = "*";
+const Baseurl = "http://127.0.0.1:8000/";
 
 const GetData = () => {
   const [data, setData] = useState<IData[]>([]);
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+
   const fetchData = async () => {
     try {
       const response = await axios.get(`${Baseurl}`);
@@ -72,23 +71,24 @@ const GetData = () => {
             </div>
           </div>
           <div className="flex items-center mt-2 ">
-            <input
-              type="text"
-              placeholder="Write Text Here ....."
-              onChange={(e) =>
-                updateData(item.id, e.target.value, e.target.value)
-              }
-              className="border p-2 rounded mr-2 w-[450px]"
-            />
-            <input
-              type="text"
-              placeholder="Write Text Here ....."
-              onChange={(e) =>
-                updateData(item.id, e.target.value, e.target.value)
-              }
-              className="border p-2 rounded mr-2 w-[450px]"
-            />
-
+            <div className="flex-row">
+              <input
+                type="text"
+                placeholder="Write Text Here ....."
+                onChange={(e) =>
+                  updateData(item.id, e.target.value, e.target.value)
+                }
+                className="border p-2 rounded mr-2 w-[450px]"
+              />
+              <input
+                type="text"
+                placeholder="Write Text Here ....."
+                onChange={(e) =>
+                  updateData(item.id, e.target.value, e.target.value)
+                }
+                className="border p-2 rounded mr-2 w-[450px]"
+              />
+            </div>
             <button
               className="bg-red-500 text-white px-4 py-2 rounded"
               onClick={() => deleteData(item.id)}
