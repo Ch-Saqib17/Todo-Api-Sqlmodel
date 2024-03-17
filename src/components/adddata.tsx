@@ -10,7 +10,7 @@ const Adddata = () => {
   const handelsubmit = async () => {
     try {
       if ([name, description]) {
-        const res = await axios.post(`${Baseurl}/todo/add`, {
+        const res = await axios.post(`https://todo-api-sqlmodel.vercel.app/todo/add`, {
           name: name,
           description: description,
         });
